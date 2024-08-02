@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="orders.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav id="nav">
+
+        <div class="navTop">
+            <div class="navItem">
+                <h1 class="oasis">. O a s i s</h1>
+
+            </div>
+            <div class="navBottom1">
+                <a onclick="window.open('index.html','_blank')" class="menuItem1">HOME</a>
+                <a  class="menuItem1">SERVICES</a>
+                <a  onclick="window.open('contact.html','_blank')"  class="menuItem1">CONTACT US</a>
+            </div>
+            <div class="cartbtn" onclick="window.open('cart.html','_blank')">Go to cart
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="cartbtn1" onclick="window.open('cart.html','_blank')">Orders
+                <i class="fa-solid fa-truck"></i>            </div>
+        </div>
+    </nav>
+    <div id="ordbox">
+        <div id="orders">
+            <h1>YOUR ORDERS</h1>
+        </div>
+    </div>
+
+    <script>
+        // Function to add an order to the cart with the current date
+        function addOrderToCart(order) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // Add the current date to the order in ISO format
+            order.date = new Date().toISOString();
+            cart.push(order);
+            // localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Function to load orders and display them on the page
+        function loadOrders() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let localCart = JSON.parse(localStorage.getItem('localcart')) || [];
+
+            console.log("Cart Orders:", cart);
+            console.log("LocalCart Orders:", localCart);
+
+            // Merge new orders from cart into localCart, prepending new orders
+            localCart = cart.concat(localCart);
+
+            // Store the updated localCart back in local storage
+            localStorage.setItem('localcart', JSON.stringify(localCart));
+
+            // Clear the cart since orders are now stored in localcart
+            localStorage.removeItem('cart');
+
+            const ordersContainer = document.getElementById('orders');
+
+            let totalItems = 0;
+            let totalPrice = 0;
+
+            localCart.forEach(order => {
+                const orderDiv = document.createElement('div');
+                orderDiv.className = 'order';
+
+                const orderImage = document.createElement('img');
+                orderImage.src = order.image;
+
+                const orderDetails = document.createElement('div');
+                orderDetails.className = 'order-details';
+
+                console.log("Order:", order);
+                if (!order.date) {
+                    console.error("Order Date is missing!");
+                    addOrderToCart(order)
+                }
+                const orderDate = new Date(order.date);
+                console.log("Parsed Order Date:", orderDate);
+
+                // Format the date and add it to the order details
+                orderDetails.innerHTML = `
+    <div style="display: flex; align-items: center;">
+        <p class="product-name">Name: ${order.name}</p>
+    <p class="total-price" style="margin-left: 550px;">Total Price: ₹${(order.price * order.quantity).toFixed(2)}</p>
+    </div>
+    <p class="product-price">Price: ₹${order.price.toFixed(2)}</p>
+    <p class="product-quantity">Quantity: ${order.quantity}</p>
+    <p class="order-date">Date: ${orderDate.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    <p class="order-status ${order.status ? order.status.replace(/\s+/g, '-').toLowerCase() : ''}">Status: ${order.status || 'Pending'}</p>`;
+
+
+                orderDiv.appendChild(orderImage);
+                orderDiv.appendChild(orderDetails);
+                ordersContainer.appendChild(orderDiv);
+
+                totalItems += order.quantity;
+                totalPrice += order.price * order.quantity;
+            });
+
+            const orderSummaryContainer = document.createElement('div');
+            orderSummaryContainer.className = 'order-summary';
+            const summary = `
+                <h2>Order Summary</h2>
+                <p>Total Items: ${totalItems}</p>
+                <p>Total Price: ₹${totalPrice.toFixed(2)}</p>
+                <p>Thank you for shopping with us!</p>
+            `;
+            orderSummaryContainer.innerHTML = summary;
+            ordersContainer.appendChild(orderSummaryContainer);
+        }
+
+        document.addEventListener('DOMContentLoaded', loadOrders);
+
+        // Example: Adding a sample order to the cart
+        // addOrderToCart({
+        //     name: 'Sample Product',
+        //     price: 19.99,
+        //     quantity: 1,
+        //     image: 'https://via.placeholder.com/100',
+        //     status: 'Order Received'
+        // });
+    </script>
+</body>
+</html>

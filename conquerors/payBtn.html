@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payBtn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="payment" id="paymentModal">
+        <h1 class="payTitle">Personal Information</h1>
+        <label>Name and Surname</label>
+        <input type="text" placeholder="Enter Name" class="payInput">
+        <label>Phone Number</label>
+        <input type="text" placeholder="Enter Number" class="payInput">
+        <label>Address</label>
+        <input type="text" placeholder="Enter Address" class="payInput">
+        <h1 class="payTitle">Card Information</h1>
+        <div class="cardIcons">
+            <img src="./img/visa.png" width="40" alt="" class="cardIcon">
+            <img src="./img/master.png" alt="" width="40" class="cardIcon">
+        </div>
+        <input type="password" class="payInput" placeholder="Card Number">
+        <div class="cardInfo">
+            <input type="text" placeholder="mm" class="payInput sm">
+            <input type="text" placeholder="yyyy" class="payInput sm">
+            <input type="text" placeholder="cvv" class="payInput sm">
+        </div>
+        
+        <button class="payButton" onclick="window.location.href='orders.html'">Checkout!</button>
+        <!-- <span class="close" id="closePaymentModal">X</span> -->
+    </div>
+</body>
+</html>

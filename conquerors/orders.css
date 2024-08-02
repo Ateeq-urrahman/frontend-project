@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(154, 147, 147);
+  }
+  
+  nav {
+    background-color: rgb(0, 0, 0);
+    height: 120px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px 30px; */
+  }
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navitem{
+    padding: 10px;
+  }
+  .oasis {
+    font-weight: 900;
+    /* display: flex; */
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 10px;color: white;
+  }
+  
+  .navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(167, 167, 250);
+  
+  .menuItem {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    margin-left: 40px;
+
+  }
+  .menuItem:hover {
+    border-radius: 10px;
+    color: black;
+    
+  }
+  .menuItem1 {
+    cursor: pointer;
+    color: lightgray;
+    padding: 5px 10px;
+    margin-left: 150px;
+    font-size: 20px;
+  }
+  
+  .menuItem1:hover {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    
+  }
+  
+  .cartbtn{
+    font-size: 30px;
+    position: relative;
+    left: 10%;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: rgb(121, 117, 117);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    word-spacing: 3px;
+  }
+  
+  .cartbtn1{
+    font-size: 30px;
+    position: relative;
+    left: 15%;
+    margin-left: 20px;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: rgb(121, 117, 117);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    word-spacing: 3px;
+  }
+  
+  .cartbtn:hover{
+  color: white;
+  background-color: rgb(92, 92, 134);
+  }
+  
+  .cartbtn1:hover{
+    color: white;
+    background-color: rgb(92, 92, 134);
+    }
+
+
+#ordbox {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    margin-left: 150px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: black;
+    margin: 0;
+}
+
+#orders {
+    width: 75vw;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order img {
+    max-width: 100px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.order p {
+    margin: 5px 0;
+}
+
+.order-summary {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.order-summary h2 {
+    margin-top: 0;
+}
+
+.order-status {
+    font-weight: bold;
+    color: #333;
+}
+
+.order-status::before {
+    content: '• ';
+}
+
+.order-status.order-received {
+    color: #4CAF50;
+}
+
+.order-status.at-the-facility {
+    color: #FFA500;
+}
+
+.order-status.out-for-delivery {
+    color: #1E90FF;
+}
+
+.order-status.order-delivered {
+    color: #32CD32;
+}
+
+.order-date {
+    font-style: italic;
+    color: #666;
+}
+
+
+  }

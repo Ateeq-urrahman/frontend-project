@@ -1,0 +1,217 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(235, 225, 225);
+  }
+  
+  nav {
+    background-color: rgb(0, 0, 0);
+    height: 120px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px 30px; */
+  }
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navitem{
+    padding: 10px;
+  }
+  .oasis {
+    font-weight: 900;
+    /* display: flex; */
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  
+  .navBottom {
+    display: flex;
+    /* flex-direction: center; */
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(167, 167, 250);
+  
+    /* border: 2px solid black; */
+    /* width: 900px; */
+  }
+  
+  .menuItem {
+    /* margin-left: 40px; */
+    
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    margin-left: 40px;
+    /* margin-top: 50px; */
+    /* margin-left: 40px; */
+    /* padding: 5px 20px; */
+  }
+  .menuItem:hover {
+    /* background-color: white; */
+    border-radius: 10px;
+    color: black;
+    
+  }
+  .menuItem1 {
+    /* margin-left: 40px; */
+    
+    cursor: pointer;
+    color: lightgray;
+    padding: 5px 10px;
+    margin-left: 150px;
+    font-size: 20px;
+    /* margin-top: 50px; */
+    /* margin-left: 40px; */
+    /* padding: 5px 20px; */
+  }
+  
+  .menuItem1:hover {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    
+  }
+  
+  .cartbtn{
+    font-size: 30px;
+    position: relative;
+    left: 10%;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: rgb(121, 117, 117);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    word-spacing: 3px;
+  }
+  
+  .cartbtn1{
+    font-size: 30px;
+    position: relative;
+    left: 15%;
+    margin-left: 20px;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: rgb(121, 117, 117);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    word-spacing: 3px;
+  }
+  
+  .cartbtn:hover{
+  color: white;
+  background-color: rgb(92, 92, 134);
+  }
+  
+  .cartbtn1:hover{
+    color: white;
+    background-color: rgb(92, 92, 134);
+    }
+
+.cart-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: #f2f2f2;
+    font-size: 16px;
+}
+
+.cart-table td img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-controls button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.quantity-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.quantity-controls input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 16px;
+}
+#buyButton1 {
+    /* position: absolute; */
+    /* filter: drop-shadow(5px 5px 5px black); */
+    bottom: 3%;
+    right: 10%;
+    font-size: 15px;
+    font-weight: 900;
+    color: white;
+    border: 1px solid gray;
+    background-color: rgb(132, 233, 132);
+    z-index: 1;
+    cursor: pointer;
+    padding: 10px 50px;
+    border-radius: 20px;
+  }

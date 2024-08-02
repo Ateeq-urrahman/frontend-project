@@ -1,0 +1,247 @@
+body {
+    background-color: #444442;
+    padding-top: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+  
+  nav {
+    background-color: rgb(0, 0, 0);
+    height: 120px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px 30px; */
+  }
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navitem{
+    padding: 10px;
+  }
+  .oasis {
+    font-weight: 900;
+    /* display: flex; */
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .sld{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:450px;
+    margin-top:50px ;
+    background-color:rgb(167, 167, 250);
+    border-radius: 80px;
+  }
+  
+  .navBottom {
+    display: flex;
+    /* flex-direction: center; */
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(167, 167, 250);
+  
+    /* border: 2px solid black; */
+    /* width: 900px; */
+  }
+  
+  .menuItem {
+    /* margin-left: 40px; */
+    
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    margin-left: 40px;
+    /* margin-top: 50px; */
+    /* margin-left: 40px; */
+    /* padding: 5px 20px; */
+  }
+  .menuItem:hover {
+    /* background-color: white; */
+    border-radius: 10px;
+    color: black;
+    
+  }
+  .menuItem1 {
+    /* margin-left: 40px; */
+    
+    cursor: pointer;
+    color: lightgray;
+    padding: 5px 10px;
+    margin-left: 150px;
+    font-size: 20px;
+    /* margin-top: 50px; */
+    /* margin-left: 40px; */
+    /* padding: 5px 20px; */
+  }
+  
+  .menuItem1:hover {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    
+  }
+  
+  .cartbtn{
+    font-size: 30px;
+    position: relative;
+    left: 10%;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: rgb(121, 117, 117);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    word-spacing: 3px;
+  }
+  
+  .cartbtn1{
+    font-size: 30px;
+    position: relative;
+    left: 15%;
+    margin-left: 20px;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: rgb(121, 117, 117);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    word-spacing: 3px;
+  }
+  
+  .cartbtn:hover{
+  color: white;
+  background-color: rgb(92, 92, 134);
+  }
+  
+  .cartbtn1:hover{
+    color: white;
+    background-color: rgb(92, 92, 134);
+    }
+  
+
+h1 {
+    font-family: 'Poppins', sans-serif, 'arial';
+    font-weight: 600;
+    font-size: 72px;
+    color: white;
+    text-align: center;
+   
+   
+}
+
+.row1{
+    margin-top: 100px;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif, 'arial';
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    line-height: 1.5;
+}
+
+.container{
+    position: relative;
+    bottom: 100px;
+}
+
+/* ///// inputs /////*/
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+    float: right;
+    padding: 7px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #4b8cfb;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
+              0 2px 10px 0 rgba(0,0,0,0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+              0 1px 1px 0 rgba(0,0,0,0.09);
+}
+

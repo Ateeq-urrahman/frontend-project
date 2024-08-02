@@ -1,0 +1,246 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Watch Oasis</title>
+</head>
+
+<body>
+    <nav id="nav">
+
+        <div class="navTop">
+            <div class="navItem">
+                <h1 class="oasis">. O a s i s</h1>
+            </div>
+            <div class="navBottom1">
+                <a class="menuItem1">HOME</a>
+                <a onclick="window.open('serv.html','_blank')" class="menuItem1">SERVICES</a>
+                <a onclick="window.open('contact.html','_blank')" class="menuItem1">CONTACT US</a>
+            </div>
+            <div class="cartbtn" onclick="window.open('cart.html','_blank')">Go to cart
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="cartbtn1" onclick="window.open('orders.html','_blank')">Orders
+                <i class="fa-solid fa-truck"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sld">
+            <div class="navBottom">
+                <h3 class="menuItem">SUNKTA</h3>
+                <h3 class="menuItem">INVICTA</h3>
+                <h3 class="menuItem">CURREN</h3>
+                <h3 class="menuItem">QUARTZ</h3>
+                <h3 class="menuItem">ROLEX</h3>
+            </div>
+        </div>
+        <div class="sliderWrapper">
+            <div id="1" class="sliderItem" data-id="1" data-name="Sunkta" data-price="19999.00"
+                data-image="img/sunkta1.png">>
+                <img src="./img/sunkta1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">SUNKTA</h1>
+                <h2 class="sliderPrice">₹19,999</h2>
+                <P class="limited">LIMITED EDITION!</P>
+                <a href="#product">
+                    <button class="buyButton">MORE INFO!</button>
+                </a>
+                <button onclick="addToCart(1)" class="buyButton1">Add To Cart!</button>
+            </div>
+            <div class="sliderItem" data-id="2" data-name="INVICTA" data-price="18000.00" data-image="img/invicta1.png">
+                <img src="./img/invicta1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">INVICTA</h1>
+                <h2 class="sliderPrice">₹18,000</h2>
+                <P class="limited">LIMITED EDITION!</P>
+                <a href="#product">
+                    <button class="buyButton">MORE INFO!</button>
+                </a>
+                <button onclick="addToCart(2)" class="buyButton1">Add To Cart!</button>
+            </div>
+            <div class="sliderItem" data-id="3" data-name="CURREN" data-price="15000.00" data-image="img/curren1.png">
+                <img src="./img/curren1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">CURREN</h1>
+                <h2 class="sliderPrice">₹15,000</h2>
+                <P class="limited">LIMITED EDITION!</P>
+                <a href="#product">
+                    <button class="buyButton">MORE INFO!</button>
+                </a>
+                <button onclick="addToCart(3)" class="buyButton1">Add To Cart!</button>
+            </div>
+            <div class="sliderItem" data-id="4" data-name="QUARTZ" data-price="19999.00" data-image="img/quartz1.png">
+                <img src="./img/quartz1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">QUARTZ</h1>
+                <h2 class="sliderPrice">₹19,999</h2>
+                <P class="limited">LIMITED EDITION!</P>
+                <a href="#product">
+                    <button class="buyButton">MORE INFO!</button>
+                </a>
+                <button onclick="addToCart(4)" class="buyButton1">Add To Cart!</button>
+            </div>
+            <div class="sliderItem" data-id="5" data-name="ROLEX" data-price="29999.00" data-image="img/rolex1.png">
+                <img src="./img/rolex1.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">ROLEX</h1>
+                <h2 class="sliderPrice">₹29,999</h2>
+                <P class="limited">LIMITED EDITION!</P>
+                <a href="#product">
+                    <button class="buyButton">MORE INFO!</button>
+                </a>
+                <button onclick="addToCart(5)" class="buyButton1">Add To Cart!</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <img src="./img/shipping.png" alt="" class="featureIcon">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/gift.png" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+    <div class="product" id="product">
+        <img src="./img/sunkta1.png" alt="" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">SUNKTA</h1>
+            <h2 class="productPrice">₹10,000</h2>
+            <p class="productDesc">It converts any kind of light into energy to power a watch and stores the surplus on
+                a power cell. On a full charge , watch runs for months even.</p>
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">38</div>
+                <div class="size">42</div>
+                <div class="size">46</div>
+            </div>
+            <button class="productButton">BUY NOW!</button>
+        </div>
+        <div class="payment">
+            <h1 class="payTitle">Personal Information</h1>
+            <label>Name and Surname</label>
+            <input type="text" placeholder="Enter Name" class="payInput">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Enter Number" class="payInput">
+            <label>Address</label>
+            <input type="text" placeholder="Enter Address" class="payInput">
+            <h1 class="payTitle">Card Information</h1>
+            <div class="cardIcons">
+                <img src="./img/visa.png" width="40" alt="" class="cardIcon">
+                <img src="./img/master.png" alt="" width="40" class="cardIcon">
+            </div>
+            <input type="password" class="payInput" placeholder="Card Number">
+            <div class="cardInfo">
+                <input type="text" placeholder="mm" class="payInput sm">
+                <input type="text" placeholder="yyyy" class="payInput sm">
+                <input type="text" placeholder="cvv" class="payInput sm">
+            </div>
+            <button class="payButton">Checkout!</button>
+            <span class="close">X</span>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleryTitle">An Expensive WatcH Doesn't</h1>
+            <img src="/img/footer1.jpg" alt="" class="galleryImg">
+        </div>
+        <div class="galleryItem">
+            <img src="/img/footer2.jpg" alt="" class="galleryImg">
+            <h1 class="galleryTitle">Just Tell You The TIME,</h1>
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">It Speaks Of Your Time As Well!</h1>
+            <img src="/img/footer3.jpg" alt="" class="galleryImg">
+        </div>
+    </div>
+    </div>
+
+    
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">SUNKTA</li>
+                    <li class="fListItem">INVICTA</li>
+                    <li class="fListItem">CURREN</li>
+                    <li class="fListItem">QUARTZ</li>
+                    <li class="fListItem">ROLEX</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="your@email.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us</h1>
+                <div class="fIcons">
+                    <img src="./img/facebook.png" alt="" class="fIcon">
+                    <img src="./img/twitter.png" alt="" class="fIcon">
+                    <img src="./img/instagram.png" alt="" class="fIcon">
+                    <img src="./img/whatsapp.png" alt="" class="fIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">@ALPHA_4lph44. All rights reserved. 2024.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./app1.js"></script>
+</body>
+
+</html>

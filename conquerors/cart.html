@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <nav id="nav">
+
+        <div class="navTop">
+            <div class="navItem">
+                <h1 class="oasis">. O a s i s</h1>
+
+            </div>
+            <div class="navBottom1">
+                <a onclick="window.open('index.html','_blank')" class="menuItem1">HOME</a>
+                <a  class="menuItem1">SERVICES</a>
+                <a  onclick="window.open('contact.html','_blank')"  class="menuItem1">CONTACT US</a>
+            </div>
+            <div class="cartbtn" onclick="window.open('cart.html','_blank')">Go to cart
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="cartbtn1" onclick="window.open('cart.html','_blank')">Orders
+                <i class="fa-solid fa-truck"></i>            </div>
+        </div>
+    </nav>
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cartTableBody">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div class="cart-total">
+            <h2>Total: ₹<span id="total-price">0.00</span></h2>
+            <div>
+                <button id="buyButton1" onclick="window.location.href='payBtn.html'">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
